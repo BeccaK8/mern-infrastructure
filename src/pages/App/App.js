@@ -10,13 +10,13 @@ import NavBar from "../../components/NavBar/NavBar";
 
 export default function App() {
 
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(null);
 
     return (
         <main className="App">
-            <NavBar />
             { user ?
                 <>
+                    <NavBar />
                     <Routes>  
                         <Route path="/orders/new" element={<NewOrderPage />} />
                         <Route path="/orders" element={<OrderHistoryPage />} />
